@@ -1,0 +1,78 @@
+/*色memo   rgb(240, 161, 243)*/
+
+body {      /*背景*/
+    background-color:rgb(255, 255, 255);
+    font-family: Meiryo;
+    font: caption;
+}
+
+#back-clear {       /*背景の上に薄い色を乗せる*/
+    background-color: rgba(130, 147, 162, 0.68);
+    opacity: 0.7;
+    display: flex;
+    width: 100%;
+}
+
+#center {
+    display: block;
+    margin: 0 auto;
+}
+
+/*inputpage*/
+
+.title {
+    display: block;
+    text-align: center;
+}
+
+.option {
+    position: flex; 
+}
+
+.block1 {
+    display: block;
+    text-align: center;
+}
+
+.block2 {
+    display: block;
+    text-align: center;
+}
+
+.p1 {
+    margin-bottom: 0em;          /*下からの距離0*/
+}
+
+.text01 {
+    border-width: 0.01cm;
+    border-radius: 10px;
+    border-color: #6f6f6f;
+}
+
+.text02 {        /*textareaのサイズを固定*/
+    resize: none;
+    border-radius: 10px;
+}
+
+.button {
+    position: static;
+    display: block;
+    /*border: none;    枠線*/
+    width: 170px;
+    height:35px;
+    /*line-height: 50px;*/
+    color: rgb(255, 255, 255);   /*ボタンの文字の色*/
+    text-decoration: none;
+    text-align: center;
+    background-color: #3c80df;
+    border-radius: 5px;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    margin-top: 1em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.button:hover {
+    background-color: #a2c3f1;    /*ボタンに触れた時の色*/
+}
