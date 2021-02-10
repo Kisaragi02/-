@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+	<servlet>
+		<servlet-name>top</servlet-name>
+		<jsp-file>/top.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>top</servlet-name>
+		<url-pattern>/top</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>threadlist</servlet-name>
+		<jsp-file>/threadList.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>threadlist</servlet-name>
+		<url-pattern>/threadlist</url-pattern>
+	</servlet-mapping>
+    
+    <servlet>
+		<servlet-name>reslist</servlet-name>
+		<jsp-file>/resList.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>reslist</servlet-name>
+		<url-pattern>/reslist</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>genreservlet</servlet-name>
+		<servlet-class>GenreServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>genreservlet</servlet-name>
+		<url-pattern>/genreservlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>threadservlet</servlet-name>
+		<servlet-class>ThreadServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>threadservlet</servlet-name>
+		<url-pattern>/threadservlet</url-pattern>
+	</servlet-mapping>
+
+    <servlet>
+		<servlet-name>resservlet</servlet-name>
+		<servlet-class>ResServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>resservlet</servlet-name>
+		<url-pattern>/resservlet</url-pattern>
+	</servlet-mapping>
+
+</web-app>
