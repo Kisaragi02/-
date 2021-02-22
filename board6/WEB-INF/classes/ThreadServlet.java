@@ -47,7 +47,7 @@ public class ThreadServlet extends HttpServlet {
 		
 		String title = req.getParameter("title");
 		String threadCreateName = req.getParameter("threadCreateName");
-		String content = req.getParameter("content");
+		String _content = req.getParameter("content");
 		String genre = req.getParameter("genre");
 		String genreName = genre;
 
@@ -57,6 +57,8 @@ public class ThreadServlet extends HttpServlet {
 		}else{
 			System.out.println("not null");
 		}
+		
+		String content = _content.replaceAll(, "<br>);
 
 		ThreadDBAccess _threadDB = new ThreadDBAccess();
 		

@@ -28,12 +28,19 @@
 <body>
 <h1><a href="http://localhost:8080/board6/threadservlet?genre=other">ジャンルその１</a></h1>
 	<c:forEach var="thread1" items="${thread1}">
-		<p>${thread1.title}</p>
-		<p>${thread1.content}</p>
-		<p>${thread1.threadCreateName}</p>
+		<p>最新の投稿↓</p>
+		<c:out value="${thread1.title}"></c:out>
+		<c:out value="${thread1.content}"></c:out>
+		<c:out value="${thread1.threadCreateName}"></c:out>
 	</c:forEach>
 	
-<h1><a href="http://localhost:8080/board6/threadservlet?genre=hobby">ジャンルその２</a></h1></p>
+<h1><a href="http://localhost:8080/board6/threadservlet?genre=hobby">ジャンルその２</a></h1>
+	<c:forEach var="thread2" items="${thread2}">
+		<p>最新の投稿↓</p>
+		<c:out value="${thread2.title}"></c:out>
+		<c:out value="${thread2.content}"></c:out>
+		<c:out value="${thread2.threadCreateName}"></c:out>
+	</c:forEach>
 	
 <h1>新規スレッド作成</h1>
 	<form name='thread_form' method='post' action='threadservlet' onSubmit="return check()">

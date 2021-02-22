@@ -20,11 +20,12 @@
 </head>
 <body>
 	<c:forEach var="thread" items="${thread}">
-		<h1>${thread.title}</h1>
-		<p>${thread.content}</p>
-		<p>${thread.threadCreateName}</p>
-		<p>${thread.date}</p>
-		<p>${thread.genre}</p>
+		<c:out value="${thread.title}"></c:out>
+		<c:out value="${thread.content}"></c:out>
+		<c:out value="${thread.threadCreateName}"></c:out>
+		<c:out value="${thread.date}"></c:out>
+		<c:out value="${thread.genre}"></c:out>
+
 
 		<h1>返信を投稿</h1>
 		<form name='thread_form' method='post' action='resservlet' onSubmit="return check()">
@@ -39,9 +40,13 @@
 
 	<h1>れすいちらん</h1>
 	<table border="1">
-		<tr><th>レス番号</th><th>投稿者</th><th>返信</th><th>投稿日</th></tr>
+		レス番号、投稿者、返信、投稿日<br>
 		<c:forEach var="post" items="${posts}">
-			<tr><td>${post.resID}</td><td>${post.resName}</td><td>${post.resContent}</td><td>${post.date}</td></tr>
+			<c:out value="${post.resID}"></c:out>
+			<c:out value="${post.resName}"></c:out>
+			<c:out value="${post.resContent}"></c:out>
+			<c:out value="${post.date}"></c:out>
+			<br>
 		</c:forEach>
 	</table>
 

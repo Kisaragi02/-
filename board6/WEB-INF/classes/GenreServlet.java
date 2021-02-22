@@ -18,13 +18,14 @@ public class GenreServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {	
 
 		req.setCharacterEncoding("Windows-31J");
-        ThreadDBAccess _threadDB = new ThreadDBAccess();
+        ThreadDBAccess _threadDB1 = new ThreadDBAccess();
+		ThreadDBAccess _threadDB2 = new ThreadDBAccess();
 
 		//String sql = "SELECT * FROM thread_sample2 where genre='other' ORDER BY threadID desc";
 		//thread1 = _threadDB.singleSelect(sql);
         //req.setAttribute("thread1",thread1);
-        req.setAttribute("thread1",_threadDB.singleSelect("SELECT * FROM thread_sample2 where genre='other' ORDER BY threadID desc"));
-        //req.setAttribute("thread2",_threadDB.singleSelect("SELECT * FROM thread_sample2 where genre='hobby' ORDER BY threadID asc"));
+        req.setAttribute("thread1",_threadDB1.singleSelect("SELECT * FROM thread_sample2 where genre='other' ORDER BY threadID desc"));
+        req.setAttribute("thread2",_threadDB2.singleSelect("SELECT * FROM thread_sample2 where genre='hobby' ORDER BY threadID desc"));
 		
 		RequestDispatcher dispatcher = req.getRequestDispatcher("top");
 		dispatcher.forward(req,res);

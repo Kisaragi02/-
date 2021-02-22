@@ -33,8 +33,13 @@
 	<table border="1">
 		<tr><th>スレッド番号</th><th>タイトル</th><th>投稿者</th><th>本文</th><th>スレッド作成日</th><th>ジャンル</th></tr>
 		<c:forEach var="thread" items="${threads}" varStatus="status">
-			<%--<tr><td><a href="http://localhost:8080/board6/resservlet?threadID=${status.count}">${thread.threadID}</td></a><td><a href="http://localhost:8080/board5/resservlet?threadID=${status.count}">${thread.title}</td></a><td>${thread.threadCreateName}</td><td>${thread.content}</td><td>${thread.date}</td><td>${thread.genre}</td></tr>--%>
-			<tr><td><a href="http://localhost:8080/board6/resservlet?threadID=${thread.threadID}">${thread.threadID}</td></a><td>${thread.title}</td><td>${thread.threadCreateName}</td><td>${thread.content}</td><td>${thread.date}</td><td>${thread.genre}</td></tr>
+			<a href="http://localhost:8080/board6/resservlet?threadID=${thread.threadID}"><c:out value="${thread.threadID}"></c:out></a>
+			<a href="http://localhost:8080/board6/resservlet?threadID=${thread.threadID}"><c:out value="${thread.title}"></c:out></a>
+			<c:out value="${thread.threadCreateName}"></c:out>
+			<c:out value="${thread.content}"></c:out>
+			<c:out value="${thread.date}"></c:out>
+			<c:out value="${thread.genre}"></c:out>
+			<br>
 		</c:forEach>
 	</table>
 	
