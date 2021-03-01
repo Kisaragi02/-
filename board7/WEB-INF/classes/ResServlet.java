@@ -37,7 +37,7 @@ public class ResServlet extends HttpServlet {
 		req.setAttribute("posts",posts);
         
 		
-		//RequestDispatcherインターフェイスを実装するクラスの//インスタンスを取得する
+		//RequestDispatcherインターフェイスを実装するクラスのインスタンスを取得する
 		//引数は転送先のURL
 		RequestDispatcher dispatcher = req.getRequestDispatcher("reslist");
 		
@@ -66,7 +66,7 @@ public class ResServlet extends HttpServlet {
 		int count = _resDB.resCount(sql);
 		int resID = count + 1;
 
-		String resContent = _resContent.replaceAll("CRLF", "<br>");
+		String resContent = _resContent.replaceAll("/n", "<br>");
 		
 		if(check.equals(resContent)){
 		}

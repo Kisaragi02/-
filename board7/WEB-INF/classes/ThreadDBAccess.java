@@ -120,10 +120,8 @@ public class ThreadDBAccess{
 		try{
 			//Driverインターフェイスを実装するクラスをロードする
 			Class.forName("oracle.jdbc.driver.OracleDriver");
-			//Connectionインターフェイスを実装するクラスの
-			//インスタンスを返す
-			Connection cn=
-				DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl","seikai","seikaipass");
+			//Connectionインターフェイスを実装するクラスのインスタンスを返す
+			Connection cn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl","seikai","seikaipass");
 			
 			//自動コミットをOFFにする
 			cn.setAutoCommit(false);

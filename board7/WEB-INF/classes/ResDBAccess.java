@@ -53,8 +53,7 @@ public class ResDBAccess{
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 
 			//Oracleに接続する
-			Connection cn=
-				DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl","seikai","seikaipass");
+			Connection cn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl","seikai","seikaipass");
 			System.out.println("接続完了");
 			
 			//Statementインターフェイスを実装するクラスをインスタンス化する
@@ -102,15 +101,14 @@ public class ResDBAccess{
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			//Connectionインターフェイスを実装するクラスの
 			//インスタンスを返す
-			Connection cn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl","info","pro");
+			Connection cn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl","seikai","seikaipass");
 			
 			//自動コミットをOFFにする
 			cn.setAutoCommit(false);
 			
 			System.out.println("接続完了");
 			
-			//Statementインターフェイスを実装するクラスの
-			//インスタンスを取得する
+			//Statementインターフェイスを実装するクラスのインスタンスを取得する
 			Statement st=cn.createStatement();
 			
 			//SQLを実行しトランザクションが開始される。処理件数が返される

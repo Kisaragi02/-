@@ -58,7 +58,7 @@ public class ThreadServlet extends HttpServlet {
 			System.out.println("not null");
 		}
 		
-		String content = _content.replaceAll("CRLF", "<br>");
+		String content = _content.replaceAll("/n", "<br>");
 
 		ThreadDBAccess _threadDB = new ThreadDBAccess();
 		
