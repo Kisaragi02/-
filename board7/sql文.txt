@@ -1,0 +1,40 @@
+
+<採番>
+CREATE SEQUENCE thread_sample_seq3
+START WITH 1
+INCREMENT BY 1
+NOCYCLE;
+
+
+<表作成>
+
+CREATE TABLE thread_sample3(
+ threadID number(4)
+,title varchar2(40)
+,threadCreateName varchar2(40)
+,content varchar2(600)
+,threadCreateDate date default sysdate
+,genre varchar2(20)
+);
+
+CREATE TABLE res_sample3(
+ threadID number(4)
+,resID number(4)
+,resName varchar2(40)
+,resContent varchar2(600)
+,resDate date default sysdate
+);
+
+
+<ユーザー作成>
+CREATE USER seikai
+IDENTIFIED BY seikaipass
+DEFAULT TABLESPACE users
+TEMPORARY TABLESPACE temp
+QUOTA 100M ON USERS;
+
+
+<システム権限付与>
+GRANT create session, create table, create view, create sequence,
+ create synonym, create public synonym
+TO seikai;
